@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-image: linear-gradient(120deg, #e2c35d,#d88771);
+}
+
+.todo-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 1.5rem;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.todo-input ,.todo-button{
+    border: none;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    background-color: white;
+}
+
+.todo-button{
+    cursor: pointer;
+    color: tomato;
+    transition: all 0.5s ease;
+}
+
+.todo-button:hover{
+    color: white;
+    background-color: tomato;
+}
+
+.todo-button i{
+    pointer-events: none;
+}
