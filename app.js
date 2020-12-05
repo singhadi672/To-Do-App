@@ -10,7 +10,7 @@ todoButton.addEventListener("click",(event)=>{
 
     let todoListItem = document.createElement("li");
     todoListItem.classList.add("todo-item");
-    todoListItem.innerText= "hey";
+    todoListItem.innerText= todoInput.value;
     let doneButton = document.createElement("button");
     doneButton.classList.add("todo-done");
 
@@ -23,8 +23,19 @@ todoButton.addEventListener("click",(event)=>{
     todoDiv.appendChild(doneButton);
     todoDiv.appendChild(deleteButton);
     todoList.appendChild(todoDiv);
-    
+    todoInput.value="";
+})
 
+todoList.addEventListener("click",(e)=>{
+    if(e.target.classList[0]==="todo-delete"){
+        e.target.parentElement.classList.add("fall");
+        e.target.parentElement.addEventListener("transitionend",()=>{
+            e.target.parentElement.remove();
+        })
+        
+    }
 
-
+    if(e.target.classList[0]==="todo-done"){
+        e.target.parentElement.classList.toggle("completed");
+    }
 })

@@ -75,10 +75,53 @@ form {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    padding: 2px;
+    transition: all 0.5s ease;
 }
 
 
-.todo li{
+.todo li {
  flex: 1;
+}
+
+.todo-done{
+    border: none;
+    background: yellowgreen;
+    padding: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.todo-done i,.todo-delete i{
+    pointer-events: none;
+}
+
+.todo-done:hover{
+    background: white;
+    color: yellowgreen;
+}
+.todo-delete{
+    border: none;
+    background: tomato;
+    padding: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.todo-delete:hover{
+    background: white;
+    color: tomato;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall{
+
+    transform: translateY(8rem) rotateZ(60deg);
+    opacity: 0;
 }
