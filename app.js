@@ -5,6 +5,10 @@ let todoList = document.querySelector(".todo-list");
 todoButton.addEventListener("click",(event)=>{
 
     event.preventDefault();
+    if(!todoInput.value){
+        alert("enter something!!!");
+    }
+    else{
     let todoDiv = document.createElement("div");
     todoDiv.classList.add("todo");
 
@@ -24,6 +28,7 @@ todoButton.addEventListener("click",(event)=>{
     todoDiv.appendChild(deleteButton);
     todoList.appendChild(todoDiv);
     todoInput.value="";
+    }
 })
 
 todoList.addEventListener("click",(e)=>{
